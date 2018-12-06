@@ -20,16 +20,17 @@ public final class Patcher {
     /**
      * 合成Patch
      *
+     * @param encode 1编码/2解码
      * @param inFilePath  patch包路径
      * @param srcFilePath 旧版Apk包路径
      * @param outFilePath 合成的新包路径
      * @return 处理结果状态码，0成功/其他失败
      */
-    private static native int applyPatch(String inFilePath, String srcFilePath, String outFilePath);
+    private static native int applyPatch(int encode, String inFilePath, String srcFilePath, String outFilePath);
 
     public static int apply(String inFilePath, String srcFilePath, String outFilePath) {
         if (sLoadNativeSuccess) {
-            return applyPatch(inFilePath, srcFilePath, outFilePath);
+            return applyPatch(0, inFilePath, srcFilePath, outFilePath);
         }
         return -1;
     }
