@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xd3-patcher/lib.iml" filepath="$PROJECT_DIR$/xd3-patcher/lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xdelta3-for-android.iml" filepath="$PROJECT_DIR$/xdelta3-for-android.iml" />
+    </modules>
+  </component>
+</project>

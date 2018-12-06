@@ -1,0 +1,21 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 28
+    }
+    sourceSets {
+        main {
+            // Other configs
+            jni.srcDirs=["src/main/jni"]
+            jniLibs.srcDirs = ['libs']
+        }
+        externalNativeBuild{
+            ndkBuild{
+                path "src/main/jni/Android.mk"
+            }
+        }
+    }
+}
